@@ -7,7 +7,7 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().FuckHoodUniversalAimbotLoadingTime = tick()
 if FuckHoodUniversalAimbotLoaded == true then
-    Notify("FuckHood", "Script Loaded Already", "", 3)
+    Notify("FuckHood", "notl lock already loaded", "", 3)
     return 
 end
 
@@ -19,7 +19,7 @@ getgenv().FuckHoodUniversalAimbotLoaded = true
 
 getgenv().SeparateNotify = function(title, text, icon, time) 
     SGui:SetCore("SendNotification",{
-        Title = title;
+        Title = NOTL;
         Text = text;
         Icon = "";
         Duration = time;
@@ -151,7 +151,7 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("FuckHood", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    Notify("NOTLONTOPBABY", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
